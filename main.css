@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+ body{
+    font-family: "Fira Sans", sans-serif;
+ padding: 0;
+ margin: 0;
+ box-sizing: border-box;
+ overflow-x: hidden;
+ }
+ /* @keyframes fadeIn {
+    0% {
+        transform:scaleY(1.5);
+        
+    }
+ 
+100% {
+        transform:translateY(-5px) ;
+  
+    }    
+ }
+    .fa-arrow-down{
+  animation-name: fadeIn;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    } */
+.hasan{
+text-shadow: 0 0 60px #304c5c ;
+animation: faden 1s infinite alternate;
+}
+@keyframes faden {
+
+    100% {
+      text-shadow: 0 0 60px  #279dd5 ;
+    }}
+
+   header{
+    position: relative;
+   }
+header::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+    filter: blur(10px);
+    
+}
+.bun{
+position: relative;
+    background-image: linear-gradient(to left, #279dd5, #304c5c);
+   z-index: 1;
+
+}
+.bun::before{
+    content: "";
+    width: 0;
+    height: 3em;
+    position: absolute;
+  right: 0;
+
+  border-radius: 1rem;
+    background-image: linear-gradient(to left ,#304c5c , #279dd5);
+   transition: all 0.3s ease-in-out;
+z-index:-1; ;
+   display: block;
+}
+.bun:hover::before{
+    width: 100%;
+    height: 100%;
+    right: 0;
+   height: 100%;
+   transition: all 0.3s ease-in-out;
+
+}
+
+ul li {
+  height: 25px;
+  width: 25px;
+  border-radius: 100%;
+  background-color: #e1642f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-bottom: 10px;
+}
+#main{
+  line-height: 60px;
+}
+
+@media  (max-width: 1080px) {
+
+  #main{
+    line-height: 60px;
+  }
+}
+.togol{
+  display: none;
+}
